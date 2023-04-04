@@ -1,0 +1,39 @@
+HPN{
+    Places {
+        PD* {
+			startTokens-> integer
+			nIn -> integer
+			nOut -> integer
+        }
+		PC* {
+			startMarks
+		}
+    }
+    Transitions {
+        T* {
+			nIn -> integer
+			nOut -> integer
+     	}
+		TD* {
+			nIn -> integer
+			nOut -> integer
+			delay -> float
+		}
+		TC*{
+			nIn -> integer
+			nOut -> integer
+			maximumSpeed -> float
+		}
+    }
+	Arcs {
+		Arc*{
+			start -> string
+			end-> string
+			weight -> float
+			[start in childs.HPN.Places or start in childs.HPN.Transitions ]
+			[end in childs.HPN.Places or end in childs.HPN.Transitions ]
+			[start != end]
+			[weight > 0]
+		}
+	}
+}

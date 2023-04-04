@@ -1,0 +1,60 @@
+{
+    "HPN": {
+        "Places": {
+            "PD_0": {
+                "startTokens": 3,
+                "nIn": 0,
+                "nOut": 1
+            },
+            "PD_1": {
+                "startTokens": 1,
+                "nIn": 1,
+                "nOut": 0
+            },
+            "PC_0": {
+                "startMarks": {}
+            },
+            "PC_1": {
+                "startMarks": {}
+            }
+        },
+        "Transitions": {
+            "T": {
+                "nIn": 0,
+                "nOut": 0
+            },
+            "TD": {
+                "nIn": 1,
+                "nOut": 1,
+                "delay": 1.0
+            },
+            "TC": {
+                "nIn": 1,
+                "nOut": 1,
+                "maximumSpeed": 0.5
+            }
+        },
+        "Arcs": {
+            "Arc_0": {
+                "start": "HPN.Places.PD_0",
+                "end": "HPN.Transitions.TD",
+                "weight": 1.0
+            },
+            "Arc_1": {
+                "start": "HPN.Transitions.TD",
+                "end": "HPN.Places.PD_1",
+                "weight": 1.0
+            },
+            "Arc_2": {
+                "start": "HPN.Places.PC_0",
+                "end": "HPN.Transitions.TC",
+                "weight": 1.0
+            },
+            "Arc_3": {
+                "start": "HPN.Transitions.TC",
+                "end": "HPN.Places.PC_1",
+                "weight": 1.0
+            }
+        }
+    }
+}

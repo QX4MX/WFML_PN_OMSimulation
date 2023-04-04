@@ -1,0 +1,12 @@
+# rm simulation result files
+*.o
+*.c
+*.h
+*.exe
+*.xml
+*.bat
+*.mat
+*.makefile
+*_info.json
+*.log
+*.libs

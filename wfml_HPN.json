@@ -1,0 +1,60 @@
+{
+    "HybridPN": {
+        "Places": {
+            "PD_0": {
+                "startTokens": 3,
+                "nIn": 0,
+                "nOut": 1
+            },
+            "PD_1": {
+                "startTokens": 1,
+                "nIn": 1,
+                "nOut": 0
+            },
+            "PC_0": {
+                "startMarks": 3.5,
+                "nIn": 0,
+                "nOut": 1
+            },
+            "PC_1": {
+                "startMarks": 1,
+                "nIn": 1,
+                "nOut": 0
+            }
+        },
+        "Transitions": {
+            "TD": {
+                "nIn": 1,
+                "nOut": 1,
+                "delay": 1
+            },
+            "TC": {
+                "nIn": 1,
+                "nOut": 1,
+                "maximumSpeed": 0.5
+            }
+        },
+        "Arcs": {
+            "Arc_0": {
+                "start": "DiscretePN.Places.PD_0",
+                "end": "DiscretePN.Transitions.TD",
+                "weight": 1
+            },
+            "Arc_1": {
+                "start": "DiscretePN.Transitions.TD",
+                "end": "DiscretePN.Places.PD_1",
+                "weight": 1
+            },
+            "Arc_2": {
+                "start": "DiscretePN.Places.PC_0",
+                "end": "DiscretePN.Transitions.TC",
+                "weight": 1
+            },
+            "Arc_3": {
+                "start": "DiscretePN.Transitions.TC",
+                "end": "DiscretePN.Places.PC_1",
+                "weight": 1
+            }
+        }
+    }
+}

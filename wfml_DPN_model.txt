@@ -1,0 +1,26 @@
+DiscretePN{
+    Places {
+        PD* {
+			startTokens-> integer
+			nIn -> integer
+			nOut -> integer
+        }
+    }
+    Transitions {
+        T* {
+			nIn -> integer
+			nOut -> integer
+     		}
+    }
+	Arcs {
+		Arc*{
+			start -> string
+			end-> string
+			weight -> integer
+			[start in childs.DiscretePN.Places or start in childs.DiscretePN.Transitions ]
+			[end in childs.DiscretePN.Places or end in childs.DiscretePN.Transitions ]
+			[start != end]
+			[weight > 0]
+		}
+	}
+}
